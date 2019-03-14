@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Create-Generator-App
 
 &emsp;&emsp; 一款轻巧好用的React脚手架
