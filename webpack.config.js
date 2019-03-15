@@ -6,31 +6,31 @@ module.exports = {
     entry: './src/main.js',
     output: {
         filename: 'bundle.[hash].js',
-        path: path.join(__dirname, '/dist')
+        path: path.join(__dirname, '/dist'),
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.js$/,
                 use: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
         }),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
     ],
     mode: 'development',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 3000
+        port: 3000,
     },
 };
